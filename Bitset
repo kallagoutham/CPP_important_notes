@@ -1,0 +1,11 @@
+BitSet in cpp is an array of bools but the only advantage using the bitset is that every boolean uses 1byte of size where as every bit in bitset occupies only 1bit size
+and the 0 indicates that it is false and 1 indicates that it is true;
+
+std::bitset is the class template for bitset that is defined inside <bitset> header file so we need to include the header file before using bitset in our program.
+
+we can intialize bitset in three ways
+
+ 1.unintialized ----->   bitset<size> variable_name;  ---> intializes the bitset of size size with all zeroes
+ 2. intialization with decimal integer ------> bitset<size> variable_name(integer)---->Bitset will represent the given decimal number in binary form.
+ 3. Initialization with binary string--->bitset<size> variable_name("BINARY_STRING");bitset<size> variable_name(string("BINARY_STRING");--->
+ Bitset will represent the given binary string
