@@ -1,0 +1,57 @@
+// C++ program to illustrate std::plus
+// by adding all array elements with a number
+#include <bits/stdc++.h>
+
+int main()
+{
+	// Array with elements to be added
+	int arr[] = { 10, 20, 30 };
+
+	// size of array
+	int size = sizeof(arr) / sizeof(arr[0]);
+
+	// Variable with which array is to be added
+	int num = 100;
+
+	// Variable to store result
+	int result;
+
+	// using std::accumulate to perform addition on array with num
+	// using std::plus
+	result = std::accumulate(arr, arr + size, num, std::plus<int>());
+
+	// Printing the result
+	std::cout << "The result of 100 + 10 + 20 + 30 is " << result;
+
+	return 0;
+}
+----------------------------------------------------------------------------------------------------------
+// C++ program to illustrate bit_xor in C++
+
+#include <algorithm>
+#include <functional> // to include bit_xor
+#include <iostream>
+#include <iterator>
+using namespace std;
+
+int main()
+{
+	// declaring the values
+	int A[] = { 1, 2, 3, 4, 5, 6 };
+	int B[] = { 6, 7, 8, 4, 5, 0 };
+	int n = 6;
+	// defining result
+	int result[n];
+
+	// transform is used to apply bitwise_xor
+	// on the arguments A and B
+	transform(A, end(A), B,
+			result, bit_xor<int>());
+
+	// printing the resulting array
+	cout << "A xor B = ";
+	for (const int& answer : result)
+		cout << ' ' << answer;
+
+	return 0;
+}
